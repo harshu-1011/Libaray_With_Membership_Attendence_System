@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/Ststyle.css">
+ <link rel="stylesheet" href="CSS/feedback.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-vimeo'></i>
+      <span class="logo_name">Vertex</span>
+    </div>
+      <ul class="nav-links">
+        <li>
+          <a href="Stindex1.jsp" class="active">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="Spayment.jsp">
+            <i class='bx bx-coin-stack' ></i>
+            <span class="links_name">Payment</span>
+          </a>
+        </li>
+        <li>
+          <a href="feedback.html">
+            <i class='bx bx-book-alt' ></i>
+            <span class="links_name">Feedback</span>
+          </a>
+        </li>
+        <li>
+          <a href="leaveform.html">
+            <i class='bx bx-badge-check' ></i>
+            <span class="links_name">Leaveform</span>
+          </a>
+        </li>
+        <li>
+          <a href="successStory.html">
+            <i class='bx bx-heart' ></i>
+            <span class="links_name">Success Story</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="#">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Student Profile</span>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <i class='bx bx-search' ></i>
+      </div>
+      <div class="profile-details">
+        <!--<img src="images/profile.jpg" alt="">-->
+        <span class="admin_name"></span>
+        <!-- <i class='bx bx-chevron-down' ></i> -->
+      </div>
+    </nav>
+  <!-- </section> -->
+
+ <section class="container">
+      <header><b>VertexStudyPoint</b></header>
+      <form action="feedback.jsp" class="form">
+
+        <div class="input-box">
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter full name" name="fname" pattern="[Aa-Zz]" required />
+        </div>
+
+        <div class="input-box">
+          <label>Feedback</label>
+          <input type="text" id="story" name="feedback" placeholder="Enter Your Feedback Here" style="height: 100px;width: 90%;"/>
+        </div>
+
+
+          <div class="column">
+            <div class="select-box">
+              <select name="stars">
+                <option hidden>Stars</option>
+                <option value="5 STARS">5*</option>
+                <option value="4 STARS">4*</option>
+                <option value="3 STARS">3*</option>
+                <option value="2 STARS">2*</option>
+                <option value="1 STAR">1*</option>
+              </select>
+            </div>
+        </div>
+
+        <br><br><button>Submit</button>
+      </form>
+    </section>
+  <script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+ </script>
+</body>
+</html>
+

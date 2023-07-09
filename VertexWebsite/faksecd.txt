@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+<title>UniqueSP| My Profile</title>
+<!--Bootstrap -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+<!--Custome Style -->
+<link rel="stylesheet" href="assets/css/styles.css" type="text/css">
+<!--OWL Carousel slider-->
+<link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
+<link rel="stylesheet" href="assets/css/owl.transitions.css" type="text/css">
+<!--slick-slider -->
+<link href="assets/css/slick.css" rel="stylesheet">
+<!--bootstrap-slider -->
+<link href="assets/css/bootstrap-slider.min.css" rel="stylesheet">
+<!--FontAwesome Font Style -->
+ <style>
+    .errorWrap {
+    padding: 10px;
+    margin: 0 0 20px 0;
+    background: #fff;
+    border-left: 4px solid #dd3d36;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+}
+.succWrap{
+    padding: 10px;
+    margin: 0 0 20px 0;
+    background: #fff;
+    border-left: 4px solid #5cb85c;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+}
+    </style>
+</head>
+<body>
+
+<section class="page-header profile_page">
+  <div class="container">
+    <div class="page-header_wrap">
+      <div class="page-heading">
+        <h1>Your Profile</h1>
+      </div>
+      <ul class="coustom-breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li>Profile</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Dark Overlay-->
+  <div class="dark-overlay"></div>
+</section>
+<!-- /Page Header-->
+<section class="user_profile inner_pages">
+  <div class="container">
+    <div class="user_profile_info gray-bg padding_4x4_40">
+      <div class="upload_user_logo"> <img src="assets/images/dealer-logo.jpg" alt="image">
+      </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-3">
+        <?php include('includes/sidebar.php');?>
+      <div class="col-md-6 col-sm-8">
+        <div class="profile_wrap">
+          <h5 class="uppercase underline">Genral Settings</h5>
+                <form  method="post">
+           <div class="form-group">
+              <label class="control-label">Reg Date -</label>
+             <?php echo htmlentities($result->RegDate);?>
+            </div>
+    
+            <div class="form-group">
+              <label class="control-label">Last Update at  -</label>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Full Name</label>
+              <input class="form-control white_bg" name="fullname" value="" id="fullname" type="text"  required>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Email Address</label>
+              <input class="form-control white_bg" value="" name="emailid" id="email" type="email" required readonly>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Phone Number</label>
+              <input class="form-control white_bg" name="mobilenumber" value="" id="phone-number" type="text" required>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Date of Birth&nbsp;(dd/mm/yyyy)</label>
+              <input class="form-control white_bg" value="" name="dob" placeholder="dd/mm/yyyy" id="birth-date" type="text" >
+            </div>
+            <div class="form-group">
+              <label class="control-label">Your Address</label>
+              <textarea class="form-control white_bg" name="address" rows="4" ></textarea>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Country</label>
+              <input class="form-control white_bg"  id="country" name="country" value="" type="text">
+            </div>
+            <div class="form-group">
+              <label class="control-label">City</label>
+              <input class="form-control white_bg" id="city" name="city" value="" type="text">
+            </div>
+
+
+            <div class="form-group">
+              <button type="submit" name="updateprofile" class="btn">Save Changes <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
+
+
+
+          <!-- ResultSet resultset = statement.executeQuery("select `s_id`,`s_FullName`,`EmailId`,`ContactNo`,`gender`,`dob`,`s_Address`,`seat_no`,`hall_type`,`study` from student") ; -->
